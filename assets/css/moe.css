@@ -1,0 +1,23 @@
+body{
+    background-color: bisque;
+}
+header{
+ background-color: lightblue;
+}
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: lightpink;
+}
+img{
+    border-radius: 50px;
+}
+h2,a{
+    color: lightgreen;
+}
