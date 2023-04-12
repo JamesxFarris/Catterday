@@ -2,7 +2,8 @@ body{
     background-color: bisque;
 }
 header{
- background-color: lightblue;
+ background-color: lavender;
+ 
 }
 .navbar-container{
     display: flex;
@@ -14,10 +15,55 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     color: lightpink;
+    padding: 20px;
+    margin: 3px;
 }
-img{
-    border-radius: 50px;
+#img-container{
+    margin-right: 55rem;
+    padding: 10px 10px;
+    width: 75px;
+
+
 }
-h2,a{
-    color: lightgreen;
+img:hover{
+    transition: 1s ease-in-out all 0s;
+    padding: 15px;
+    margin: 5px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+#user-photo{
+    border-radius: 80px;
+    width: 75px;
+    height: 75px;
+    background-color:rgb(161, 184, 161) ;
+
+}
+#username{
+    font-size: larger;
+    color: wheat;
+    text-shadow: 1px 2px 1px palevioletred;
+
+}
+#logo{
+    color: gray;
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300px;
+    padding: 15px 10px;
+}
+#logo:hover{
+    margin: 10px;
+    padding: 20px 10px;
+    transition: .5s ease-in-out all 0s;
+    color: papayawhip;
+    text-shadow: 1px 1px 1px black;
+    font-size: x-large;
+    font-weight: 600px;
+    cursor: pointer;
 }
