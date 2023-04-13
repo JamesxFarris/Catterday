@@ -1,5 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: bisque;
+}
+h1 {
+  font-size: 250%;
+}
+h2 {
+  font-size: 225%;
+}
+h3 {
+  font-size: 200%;
 }
 header {
   background-color: lavender;
@@ -33,17 +46,7 @@ img:hover {
 a {
   text-decoration: none;
 }
-#user-photo {
-  border-radius: 80px;
-  width: 75px;
-  height: 75px;
-  background-color: rgb(161, 184, 161);
-}
-#username {
-  font-size: larger;
-  color: wheat;
-  text-shadow: 1px 2px 1px palevioletred;
-}
+
 #logo {
   color: gray;
   text-decoration: none;
@@ -62,4 +65,25 @@ a {
   font-size: x-large;
   font-weight: 600px;
   cursor: pointer;
+}
+/*layout of page*/
+.page__container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.main__container {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.navigation {
+  background-color: blue;
+  width: 15%;
+}
+header {
+  background-color: aquamarine;
+}
+.feed {
+  background-color: greenyellow;
 }
