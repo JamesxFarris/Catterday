@@ -20,37 +20,37 @@
   <body>
     <!-- Aside for nav -->
     <div class="page__container">
-      <aside class="navigation">
+      <aside class="navigation m-2 container">
         <!-- User PFP -->
-        <div class="profile-icon"></div>
+        <div class="profile__icon"></div>
 
         <p>to see where this is</p>
         <button
-          class="button"
+          class="button side__button m-2 has-text-weight-semibold"
           id="savedPosts"
           onclick="window.location.href='saved-posts.html'"
         >
-          Save Post
+          Bookmarks
         </button>
         <button
-          class="button"
+          class="button side__button m-2 has-text-weight-semibold"
           id="cotd"
-          onclick="window.location.href='CotD.html'"
+          onclick="window.location.href='cotd.html'"
         >
-          CotD
+          Cat of the Day
         </button>
       </aside>
 
       <main class="main__container">
         <!-- Header text -->
-        <header>
-          <h1>Catterday</h1>
+        <header class="m-2">
+          <h1 class="page__name is-size-1-mobile">Catterday</h1>
         </header>
 
         <!-- Main post body -->
-        <section class="feed">
+        <section class="feed m-2 p-6">
           <!-- Post cards -->
-          <div class="card is-half-desktop is-centered">
+          <div class="card is-half-desktop is-centered overflow-auto">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -58,18 +58,19 @@
                     <img
                       src="https://bulma.io/images/placeholders/96x96.png"
                       alt="Placeholder image"
+                      class="is-rounded"
                     />
                   </figure>
                 </div>
-                <div class="media-content">
+                <div class="media__content">
                   <p class="title is-4">John Smith</p>
                   <p class="subtitle is-6">@johnsmith</p>
                 </div>
               </div>
-
+              <hr class="separator" />
               <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
                 <a href="#">#css</a>
                 <a href="#">#responsive</a>
                 <br />
