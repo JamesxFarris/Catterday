@@ -20,20 +20,13 @@ header {
   border: black;
   border-style: solid;
   border-width: 2px;
+  height: fit-content;
 }
 
 aside {
   border: black;
   border-style: solid;
   border-width: 2px;
-}
-
-img:hover {
-  transition: 1s ease-in-out all 0s;
-  padding: 15px;
-  margin: 5px;
-  background-color: lightblue;
-  cursor: pointer;
 }
 
 a {
@@ -62,6 +55,32 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+/*PROFILE STYLING*/
+.profile__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--primary-profile);
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+.profile-figure {
+  width: 45%;
+}
+
+.profile__username {
+  display: flex;
+  /*width: 90%;*/
+  height: 50px;
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
 .side__button {
   width: 85%;
@@ -71,55 +90,59 @@ footer {
 .feed {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
-  border: black;
-  border-style: solid;
-  border-width: 2px;
-  overflow: hidden;
 }
 
 .card {
   width: 100%;
-  height: 12rem;
+  height: 16rem;
   border: grey;
   border-style: solid;
   border-width: 2px;
   border-radius: 20px;
   overflow-y: scroll;
+  height: fit-content;
+  margin-bottom: 3rem;
 }
 
-.separator {
-  width: 100%;
-  top: 50%;
-  background-color: black;
-}
-
-.side__button {
-  border: grey;
+.nav__button {
+  /*border: grey;
   border-style: solid;
-  border-width: 2px;
+  border-width: 2px;*/
   font-size: 1.5vw;
 }
+/**/
 
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 85%;
+  }
+}
 /* Colors for reference (Probably gonna do this the way Austin said. It will
 be in a seperate CSS file) */
-header,
-aside {
-  background-color: #d9d2e9;
-}
 
 body {
-  background-color: #d0e0e3;
+  background-color: var(--primary-background-color);
+}
+
+header,
+aside {
+  background-color: var(--primary-frame);
 }
 
 .card {
-  background: linear-gradient(180deg, white 50%, #ead1dc 50%);
+  background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
 }
 
-.feed {
-  background-color: white;
+.profile__username {
+  background-color: var(--primary-profile);
+}
+
+.profile__container {
+  background-color: var(--primary-profile);
 }
 
 .side__button {
-  background-color: #fff2cc;
+  background-color: var(--primary-card);
 }
