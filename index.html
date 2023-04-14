@@ -10,11 +10,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    /> -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -23,6 +23,12 @@
       <aside class="navigation m-2 container">
         <!-- User PFP -->
         <div class="profile__icon"></div>
+
+
+        <button class="js-modal-trigger" data-target="profile-modal">
+          Open JS example modal
+        </button>
+
 
         <p>to see where this is</p>
         <button
@@ -39,6 +45,7 @@
         >
           Cat of the Day
         </button>
+
       </aside>
 
       <main class="main__container">
@@ -50,7 +57,7 @@
         <!-- Main post body -->
         <section class="feed m-2 p-6">
           <!-- Post cards -->
-          <div class="card is-half-desktop is-centered overflow-auto">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -90,6 +97,27 @@
         More Hiss-terical Posts
       </button>
     </footer>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    
+    <div id="profile-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
+        <div class="info-card">
+          <div class="name-box">
+            <input class="input is-large name-space" type="text" placeholder="Large input">
+          </div>
+          <div class="option-holder level">
+            <div class="bio-box level-item control">
+              <textarea class="textarea has-fixed-size" placeholder="Add your Bio!"></textarea>
+            </div>
+            <div class="theme-box level-item">
+              <div class="switch">Standin switcher</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
   </body>
 </html>

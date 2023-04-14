@@ -28,14 +28,6 @@ aside {
   border-width: 2px;
 }
 
-img:hover {
-  transition: 1s ease-in-out all 0s;
-  padding: 15px;
-  margin: 5px;
-  background-color: lightblue;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
 }
@@ -101,25 +93,73 @@ footer {
   font-size: 1.5vw;
 }
 
+.modal-content {
+  height: 70%;
+  width: 70%;
+  background-color: #dae9d4;
+  border-radius: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+}
+
+.your-profile-picture {
+  border-radius: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  margin: 5%;
+}
+
+.info-card {
+  display: flex;
+  flex-flow: column;
+}
+
+.option-holder {
+  display: flex;
+  flex-flow: row;
+}
+.theme-box {
+  min-width: 50%;
+}
+
+.switch {
+  background-color: white;
+  min-width: 130px;
+  min-height: 128px;
+  border: solid;
+  min-width: 50%;
+}
+.name-space {
+  border: solid;
+}
+
+.bio-box {
+  border: solid;
+  max-height: 128px;
+  max-width: 50%;
+}
+
 /* Colors for reference (Probably gonna do this the way Austin said. It will
 be in a seperate CSS file) */
 header,
 aside {
-  background-color: #d9d2e9;
+  background-color: #d2e0e3;
 }
 
 body {
-  background-color: #d0e0e3;
+  background-color: #d7d1e9;
 }
 
 .card {
-  background: linear-gradient(180deg, white 50%, #ead1dc 50%);
+  background: linear-gradient(180deg, white 50%, #d7d1e9 50%);
 }
 
 .feed {
-  background-color: white;
+  background-color: #c8dafa;
 }
 
 .side__button {
-  background-color: #fff2cc;
+  background-color: #c8dafa;
 }
+
