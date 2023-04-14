@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catterday.gov</title>
-    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    /> -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
+      id="theme-link"
+      href="./assets/css/themes/berry.css"
+    />
+    <!--
+      <link
+      rel="stylesheet"
+      id="theme-link"
+      href="./assets/css/themes/warm.css"
+    />
+    <link
+      rel="stylesheet"
+      id="theme-link"
+      href="./assets/css/themes/dark.css"
+    />
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
@@ -22,34 +35,117 @@
     <div class="page__container">
       <aside class="navigation m-2 container">
         <!-- User PFP -->
-        <div class="profile__icon"></div>
-
-        <p>to see where this is</p>
+        <div class="profile__container is-rounded">
+          <!-- user profile pic stand in-->
+          <figure class="profile__figure image is-128x128">
+            <img
+              src="https://bulma.io/images/placeholders/128x128.png"
+              alt="Placeholder image"
+              class="is-rounded"
+              id="profile__image"
+            />
+          </figure>
+          <div class="profile__username is-rounded">
+            <p>Username Stand-in</p>
+          </div>
+        </div>
         <button
-          class="button side__button m-2 has-text-weight-semibold"
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
           id="savedPosts"
           onclick="window.location.href='saved-posts.html'"
         >
           Bookmarks
         </button>
         <button
-          class="button side__button m-2 has-text-weight-semibold"
+          class="button side__button nav__button is-rounded m-2 has-text-weight-semibold"
           id="cotd"
           onclick="window.location.href='cotd.html'"
         >
           Cat of the Day
         </button>
+        <button
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
+          id="savedPosts"
+          onclick="window.location.href='404.html'"
+        >
+          Latest Mews
+        </button>
       </aside>
 
       <main class="main__container">
         <!-- Header text -->
-        <header class="m-2">
+        <header class="m-2 is-clipped">
           <h1 class="page__name is-size-1-mobile">Catterday</h1>
         </header>
 
         <!-- Main post body -->
         <section class="feed m-2 p-6">
           <!-- Post cards -->
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
           <div class="card is-half-desktop is-centered overflow-auto is-clipped">
             <div class="card-content">
               <div class="media">
@@ -67,7 +163,217 @@
                   <p class="subtitle is-6">@johnsmith</p>
                 </div>
               </div>
-              <hr class="separator" />
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+                <a href="#">#css</a>
+                <a href="#">#responsive</a>
+                <br />
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card is-half-desktop is-centered overflow-auto is-clipped"
+          >
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://bulma.io/images/placeholders/96x96.png"
+                      alt="Placeholder image"
+                      class="is-rounded"
+                    />
+                  </figure>
+                </div>
+                <div class="media__content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
               <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus nec iaculis mauris adding a ton of content here to see if the card size will change with that  I am just going to keep adding things until it gets to two lines and see what happens.<a>@bulmaio</a>.
@@ -80,6 +386,10 @@
           </div>
         </section>
       </main>
+      <!--
+      <div class="button-container">
+        <button id="api" onclick="clicker">Click for Dad Jokes</button>
+      </div>-->
     </div>
     <footer class="footer">
       <button
@@ -90,6 +400,8 @@
         More Hiss-terical Posts
       </button>
     </footer>
+    <script src="moe.js"></script>
+    <script src="/assets/js/script.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
   </body>
 </html>
