@@ -101,6 +101,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   /* justify-content: center; */
+  padding: 5px 10px;
 }
 
 .your-profile-picture {
@@ -125,10 +126,10 @@ footer {
 
 .switch {
   background-color: white;
-  min-width: 130px;
   min-height: 128px;
   border: solid;
-  min-width: 50%;
+  min-width: 100%;
+  text-align: center;
 }
 .name-space {
   border: solid;
@@ -138,6 +139,9 @@ footer {
   border: solid;
   max-height: 128px;
   max-width: 50%;
+  /* margin-left: 1px;
+  /* padding-right: 3px; */
+  /* margin-right: 10px; */
 }
 
 /* Colors for reference (Probably gonna do this the way Austin said. It will
