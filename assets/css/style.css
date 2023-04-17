@@ -58,24 +58,31 @@ footer {
 /*PROFILE STYLING*/
 .profile__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items:center;
+  width: 85%;
   background-color: var(--primary-profile);
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  border-radius:10px;
+  padding:0.5rem;
+  margin:1rem;
 }
-.profile-figure {
-  width: 45%;
+.profile__figure {
+  width: 60%;
+  height:60%;
+  display:flex;
+  align-items:center;
 }
 
 .profile__username {
   display: flex;
   /*width: 90%;*/
   height: 50px;
-  border: black;
-  border-style: solid;
+  /*border: black;
+  border-style: solid;*/
   border-width: 1px;
   text-align: center;
   justify-content: center;
