@@ -13,7 +13,7 @@ function initThemeSelector() {
 
   themeSelect.addEventListener("change", () => {
     activateTheme(themeSelect.value);
-    localStorage.setItem("theme", themeName.value);
+    localStorage.setItem("theme", themeSelect.value);
   });
 
   themeSelect.value = currentTheme;
