@@ -101,7 +101,6 @@ footer {
   border-radius: 80px;
   display: flex;
   flex-flow: row wrap;
-  /* justify-content: center; */
   padding: 5px 10px;
 }
 
@@ -134,7 +133,6 @@ footer {
   flex-direction:column;
   align-items:center;
   justify-content: center;
-  /**/
 }
 .switch {
   border-bottom-right-radius: 20px;
@@ -179,13 +177,8 @@ footer {
   background-color:#c8dafa;
 }
 .bio-box {
-  /*border: solid;*/
   max-height: 128px;
   max-width: 50%;
-  /*border-bottom-left-radius: 20px;*/
-  /* margin-left: 1px;
-  /* padding-right: 3px; */
-  /* margin-right: 10px; */
 }
 .theme-select {
   width:50%;
@@ -243,7 +236,6 @@ body {
   .modal-content {
     width: 95%;
     height:100%;
-    /*flex-flow:row;*/
   }
   .theme-select{
     width:80%;
