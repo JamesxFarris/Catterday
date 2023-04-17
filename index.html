@@ -10,24 +10,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
     <link
       rel="stylesheet"
       id="theme-link"
       href="./assets/css/themes/berry.css"
     />
-    <!--
-      <link
-      rel="stylesheet"
-      id="theme-link"
-      href="./assets/css/themes/warm.css"
-    />
-    <link
-      rel="stylesheet"
-      id="theme-link"
-      href="./assets/css/themes/dark.css"
-    />
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  
+
   </head>
 
   <body>
@@ -35,6 +27,17 @@
     <div class="page__container">
       <aside class="navigation m-2 container">
         <!-- User PFP -->
+
+        <div class="profile__icon"></div>
+
+
+        <button class="js-modal-trigger" data-target="profile-modal">
+          Open JS example modal
+        </button>
+
+
+        <p>to see where this is</p>
+
         <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
           <!-- user profile pic stand in-->
           <figure class="profile__figure image">
@@ -49,6 +52,7 @@
             <p>Username Stand-in</p>
           </div>
         </div>
+
         <button
           class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
           id="savedPosts"
@@ -63,6 +67,7 @@
         >
           Cat of the Day
         </button>
+
         <button
           class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
           id="savedPosts"
@@ -70,6 +75,7 @@
         >
           Latest Mews
         </button>
+
       </aside>
 
       <main class="main__container">
@@ -395,8 +401,48 @@
       </button>
     </footer>
     
+
+    <div id="profile-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
+        <div class="info-card">
+          <div class="name-box">
+            <input class="input is-large name-space" type="text" placeholder="Large input">
+            <button class="name-save">save username</button>
+          </div>
+          <div class="option-holder">
+            <div class="bio-box control">
+              <input class=" bio-box__input" type="text" placeholder="Add your bio!">
+              <button class="save-bio">save bio</button>
+            </div>
+            <div class="theme-box level-item level-right">
+              <div class="switch">
+                <p>Theme: </p>
+                <select class="theme-select" name="theme-select" id="theme-select">
+                  <option value="berry" id="theme-select__option">Berry</option>
+                  <option value="warm" id="theme-select__option">Warm</option>
+                  <option value="dark" id="theme-select__option">Dark</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-pic__options">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="moe.js"></script>
     <script src="/assets/js/script.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+
   </body>
 </html>
