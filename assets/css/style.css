@@ -105,7 +105,17 @@ footer {
   height: fit-content;
   margin-bottom: 3rem;
 }
-
+.media {
+  background-color:white;
+  padding:1.5rem;
+}
+.content {
+  background-color:var(--primary-card);
+  padding:1.5rem;
+}
+.card-content {
+  padding:0px;
+}
 .nav__button {
   /*border: grey;
   border-style: solid;
@@ -131,9 +141,9 @@ aside {
   background-color: var(--primary-frame);
 }
 
-.card {
+/*.card {
   background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
-}
+}*/
 
 .profile__username {
   background-color: var(--primary-profile);
