@@ -58,24 +58,31 @@ footer {
 /*PROFILE STYLING*/
 .profile__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items:center;
+  width: 85%;
   background-color: var(--primary-profile);
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  border-radius:10px;
+  padding:0.5rem;
+  margin:1rem;
 }
-.profile-figure {
-  width: 45%;
+.profile__figure {
+  width: 60%;
+  height:60%;
+  display:flex;
+  align-items:center;
 }
 
 .profile__username {
   display: flex;
   /*width: 90%;*/
   height: 50px;
-  border: black;
-  border-style: solid;
+  /*border: black;
+  border-style: solid;*/
   border-width: 1px;
   text-align: center;
   justify-content: center;
@@ -105,7 +112,17 @@ footer {
   height: fit-content;
   margin-bottom: 3rem;
 }
-
+.media {
+  background-color:white;
+  padding:1.5rem;
+}
+.content {
+  background-color:var(--primary-card);
+  padding:1.5rem;
+}
+.card-content {
+  padding:0px;
+}
 .nav__button {
   /*border: grey;
   border-style: solid;
@@ -131,13 +148,17 @@ aside {
   background-color: var(--primary-frame);
 }
 
+
+/*.card {
+
 .page__name {
   color: var(--primary-card);
 }
 
 .card {
+
   background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
-}
+}*/
 
 .profile__username {
   background-color: var(--primary-profile);
