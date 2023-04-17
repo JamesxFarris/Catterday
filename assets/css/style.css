@@ -131,14 +131,14 @@ footer {
 }
 /**/
 
+/* Media Queries */
 @media only screen and (min-width: 1200px) {
   .card {
     width: 85%;
   }
 }
-/* Colors for reference (Probably gonna do this the way Austin said. It will
-be in a seperate CSS file) */
 
+/* Color declarations */
 body {
   background-color: var(--primary-background-color);
 }
@@ -148,7 +148,15 @@ aside {
   background-color: var(--primary-frame);
 }
 
+
 /*.card {
+
+.page__name {
+  color: var(--primary-card);
+}
+
+.card {
+
   background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
 }*/
 
