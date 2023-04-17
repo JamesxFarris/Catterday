@@ -96,7 +96,7 @@ footer {
 /*MODAL STYLING*/
 .modal-content {
   height: 60%;
-  width: 700px;
+  width: 750px;
   background-color: #dae9d4;
   border-radius: 80px;
   display: flex;
@@ -233,6 +233,8 @@ body {
   .modal-content {
     height: 70%;
     width: 750px;
+    flex-flow: column;
+    align-items: center;
   }
 
 }
