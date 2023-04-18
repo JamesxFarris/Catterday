@@ -69,9 +69,16 @@ a {
 
 footer {
   display: flex;
+  flex-direction:column;
   justify-content: center;
+  align-items:center;
 }
-
+#pageRefresh, #backToTop {
+  width:30%;
+  border:solid;
+  border-radius:20px;
+  background-color:var(--primary-card);
+}
 /*layout of page*/
 .page__container {
   display: flex;
@@ -355,6 +362,9 @@ body {
   h1 {
     font-size: 500%;
   }
+  #pageRefresh, #backToTop {
+    width:50%;
+  }
 }
 
 header,
@@ -397,10 +407,16 @@ aside {
   h1 {
     font-size: 300%;
   }
+  #pageRefresh, #backToTop {
+    width:70%;
+  }
 }
 
 @media (max-width: 400px) {
   h1 {
     font-size: 200%;
+  }
+  #pageRefresh, #backToTop {
+    width:80%;
   }
 }
