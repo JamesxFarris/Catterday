@@ -73,5 +73,46 @@
           >
         </header>
       </main>
+      <div id="profile-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
+          <div class="info-card">
+            <div class="name-box">
+              <input class="input is-large name-space" type="text" placeholder="Large input">
+              <button class="name-save">save username</button>
+            </div>
+            <div class="option-holder">
+              <div class="bio-box control">
+                <input class=" bio-box__input" type="text" placeholder="Add your bio!">
+                <button class="save-bio">save bio</button>
+              </div>
+              <div class="theme-box level-item level-right">
+                <div class="switch">
+                  <p>Theme: </p>
+                  <select class="theme-select" name="theme-select" id="theme-select">
+                    <option value="berry" id="theme-select__option">Berry</option>
+                    <option value="warm" id="theme-select__option">Warm</option>
+                    <option value="dark" id="theme-select__option">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-pic__options">
+            <img src="https://www.thesprucepets.com/thmb/j-UAD2P3BYKmkvyCoujj5hPgq04=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/guide-to-cat-eyes-552114-hero-75d820458de24543a35543a584b9eec6.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-07/black-cat-halloween-mc-220713-02-b10ec0.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+          </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+  
+  
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+      <script src="moe.js"></script>
+      <script src="./assets/js/script.js"></script>
     </body>
     </html>
