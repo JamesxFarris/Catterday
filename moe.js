@@ -1,33 +1,29 @@
 
-
-document.getElementById("btn").addEventListener("click", jokes);
-
-// function jokes(){
-//   fetch({"https://icanhazdadjoke.com/":})
-//               .then(function (response) {
-//                   return response.json()
-//               })
-//               .then(function (data) {
-//                   console.log(data)
-//               })
-
-// }
-
-
-
-
-
-
-  async function jokes(){
-    let config = {
-      headers: {
+function fetchAPI(){
+  
+  fetch("https://icanhazdadjoke.com/",{
+    method: 'GET',
+    headers: {
       Accept: "application/json",
-    },
-  };
-
-  let a = await fetch("https://icanhazdadjoke.com/", config);
-  let b = await a.json()
-  document.getElementById("content").innerHTML = b.jokes;
-
+    }
+    
+  }).then(res => {
+      return res.json()
+    })
+    .then(data => 
+      document.getElementById('content').textContent = data.joke)
+      
+    .catch(error => console.log('ERROR'))
+    
+    
 }
-console.log(jokes);
+
+document.getElementById('btn').addEventListener('click', fetchAPI);
+
+      
+
+      
+      
+      
+      
+      
