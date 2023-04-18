@@ -166,6 +166,14 @@ footer {
   margin-bottom: 3rem;
 }
 
+#generated__pfp1, #generated__pfp2, #generated__pfp3, #generated__pfp4, #generated__pfp5, #generated__pfp6, #generated__pfp7, #generated__pfp8, #generated__pfp9, #generated__pfp10 {
+  object-fit: cover;
+  height:75px;
+}
+.image.is-48x48 {
+  width:75px;
+}
+
 .media {
   background-color: white;
   padding: 1.5rem;
