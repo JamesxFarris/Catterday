@@ -4,14 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat of the Day</title>
-    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <title>Catterday.gov Cat of the Day</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      id="theme-link"
+      href="./assets/css/themes/berry.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body></body>
-</html>
+  <body>
+    <!-- Aside for nav -->
+    <div class="page__container">
+      <aside class="navigation m-2 container" id="full">
+        <!-- User PFP -->
+
+        <div class="profile__icon"></div>
+        <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
+          <!-- user profile pic stand in-->
+          <figure class="profile__figure image">
+            <img
+              src="https://bulma.io/images/placeholders/128x128.png"
+              alt="Placeholder image"
+              class="is-rounded"
+              id="profile__image"
+            />
+          </figure>
+          <div class="profile__username is-rounded">
+            <p>Username Stand-in</p>
+          </div>
+        </div>
+
+        <button
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
+          id="savedPosts"
+          onclick="window.location.href='saved-posts.html'"
+        >
+          Bookmarks
+        </button>
+        <button
+          class="button side__button nav__button is-rounded m-2 has-text-weight-semibold"
+          id="cotd"
+          onclick="window.location.href='cotd.html'"
+        >
+          Cat of the Day
+        </button>
+
+        <button
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
+          id="savedPosts"
+          onclick="window.location.href='404.html'"
+        >
+          Latest Mews
+        </button>
+
+      </aside>
+
+      <main class="main__container">
+        <!-- Header text -->
+        <header class="m-2 is-clipped">
+          <a href="/index.html"
+            ><h1 class="page__name is-size-1-mobile">Catterday</h1></a
+          >
+        </header>
+      </main>
+    </body>
+    </html>

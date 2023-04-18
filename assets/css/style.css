@@ -27,6 +27,22 @@ aside {
   border: black;
   border-style: solid;
   border-width: 2px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: var(--primary-frame);
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -49,12 +65,7 @@ footer {
   flex-direction: column;
   width: 85%;
 }
-.navigation {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 /*PROFILE STYLING*/
 .profile__container {
   display: flex;
@@ -62,6 +73,19 @@ footer {
   justify-content: center;
   align-items: center;
   width: 85%;
+  background-color: var(--primary-profile);
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.profile__container_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-profile);
   border-width: 1px;
   border-style: solid;
@@ -91,6 +115,11 @@ footer {
 
 .side__button {
   width: 85%;
+  height: 3rem;
+}
+
+.side__button__mobile {
+  width: 100px;
   height: 3rem;
 }
 
@@ -267,18 +296,11 @@ body {
   .theme-select {
     width: 80%;
   }
+  aside {
+    display: none;
+  }
 }
 
-/*.card {
-
-.page__name {
-  color: var(--primary-card);
-}
-
-.card {
-
-  background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
-}*/
 header,
 aside {
   background-color: var(--primary-frame);
