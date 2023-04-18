@@ -1,27 +1,16 @@
-function fetchAPI() {
-  var limit = 9;
-  $.ajax({
-    method: "GET",
-    url: "https://api.api-ninjas.com/v1/dadjokes?limit=" + limit,
-    headers: { "X-Api-Key": "5TI+HKFoXcZunYlBIFs2dg==RmI4ETgeWKcZvWf1" },
-    contentType: "application/json",
-    success: function (result) {
-      console.log(result);
+// Dad joke api
+var api = "https://icanhazdadjoke.com/";
+
+async function jokes() {
+  let config = {
+    headers: {
+      Accept: "application/json",
     },
-    error: function ajaxError(jqXHR) {
-      console.error("Error: ", jqXHR.responseText);
-    },
-  });
+  };
+
+  let a = await fetch("https://icanhazdadjoke.com/", config);
+  let b = await a.json();
+  document.getElementById("api").addEventListener("click", jokes);
+  document.getElementById("content").innerHTML = b.jokes;
 }
-
-// //- Using a function pointer:
-// document.getElementById("api").onclick = fetchAPI;
-
-// fetch({function name(params) {
-
-// }})
-//             .then(function (response) {
-//                 return response.json()
-//             })
-//             .then(function (data) {
-//                 console.log(data)
+console.log(jokes);

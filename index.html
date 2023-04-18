@@ -1,448 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catterday.gov</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catterday.gov</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" id="theme-link" href="./assets/css/themes/berry.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
-    <link
-      rel="stylesheet"
-      id="theme-link"
-      href="./assets/css/themes/berry.css"
-    />
-  
+<body>
+  <!-- Aside for nav -->
+  <div class="page__container">
+    <aside class="navigation m-2 container" id="full">
+      <!-- User PFP -->
 
-  </head>
-
-  <body>
-    <!-- Aside for nav -->
-    <div class="page__container">
-      <aside class="navigation m-2 container">
-        <!-- User PFP -->
-
-        <div class="profile__icon"></div>
-
-
-        <button class="js-modal-trigger" data-target="profile-modal">
-          Open JS example modal
-        </button>
-
-
-        <p>to see where this is</p>
-
-        <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
-          <!-- user profile pic stand in-->
-          <figure class="profile__figure image">
-            <img
-              src="https://bulma.io/images/placeholders/128x128.png"
-              alt="Placeholder image"
-              class="is-rounded"
-              id="profile__image"
-            />
-          </figure>
-          <div class="profile__username is-rounded">
-            <p>Username Stand-in</p>
-          </div>
-        </div>
-
-        <button
-          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
-          id="savedPosts"
-          onclick="window.location.href='saved-posts.html'"
-        >
-          Bookmarks
-        </button>
-        <button
-          class="button side__button nav__button is-rounded m-2 has-text-weight-semibold"
-          id="cotd"
-          onclick="window.location.href='cotd.html'"
-        >
-          Cat of the Day
-        </button>
-
-        <button
-          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
-          id="savedPosts"
-          onclick="window.location.href='404.html'"
-        >
-          Latest Mews
-        </button>
-
-      </aside>
-
-      <main class="main__container">
-        <!-- Header text -->
-        <header class="m-2 is-clipped">
-          <a href="/index.html"
-            ><h1 class="page__name is-size-1-mobile">Catterday</h1></a
-          >
-        </header>
-
-        <!-- Main post body -->
-        <section class="feed m-2 p-6">
-          <!-- Post cards -->
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="card is-half-desktop is-centered overflow-auto is-clipped"
-          >
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-48x48">
-                    <img
-                      src="https://bulma.io/images/placeholders/96x96.png"
-                      alt="Placeholder image"
-                      class="is-rounded"
-                    />
-                  </figure>
-                </div>
-                <div class="media__content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
-                </div>
-              </div>
-
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris adding a ton of content here to see if the card size will change with that  I am just going to keep adding things until it gets to two lines and see what happens.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-        </section>
-      </main>
-      <!--
-      <div class="button-container">
-        <button id="api" onclick="clicker">Click for Dad Jokes</button>
-      </div>-->
-    </div>
-    <footer class="footer">
-      <button
-        class="button"
-        id="pageRefresh"
-        onclick="window.location.href='index.html'"
-      >
-        More Hiss-terical Posts
-      </button>
-    </footer>
-    
-
-    <div id="profile-modal" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
-        <div class="info-card">
-          <div class="name-box">
-            <input class="input is-large name-space" type="text" placeholder="Large input">
-            <button class="name-save">save username</button>
-          </div>
-          <div class="option-holder">
-            <div class="bio-box control">
-              <input class=" bio-box__input" type="text" placeholder="Add your bio!">
-              <button class="save-bio">save bio</button>
-            </div>
-            <div class="theme-box level-item level-right">
-              <div class="switch">
-                <p>Theme: </p>
-                <select class="theme-select" name="theme-select" id="theme-select">
-                  <option value="berry" id="theme-select__option">Berry</option>
-                  <option value="warm" id="theme-select__option">Warm</option>
-                  <option value="dark" id="theme-select__option">Dark</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="profile-pic__options">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="profile-pic__option is-rounded"/>
+      <div class="profile__icon"></div>
+      <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
+        <!-- user profile pic stand in-->
+        <figure class="profile__figure image">
+          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="is-rounded"
+            id="profile__image" />
+        </figure>
+        <div class="profile__username is-rounded">
+          <p>Username Stand-in</p>
         </div>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+
+      <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
+        onclick="window.location.href='saved-posts.html'">
+        Bookmarks
+      </button>
+      <button class="button side__button nav__button is-rounded m-2 has-text-weight-semibold" id="cotd"
+        onclick="window.location.href='cotd.html'">
+        Cat of the Day
+      </button>
+
+      <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
+        onclick="window.location.href='404.html'">
+        Latest Mews
+      </button>
+
+    </aside>
+
+    <main class="main__container">
+      <!-- Header text -->
+      <header class="m-2 is-clipped">
+        <a href="/index.html">
+          <h1 class="page__name">Catterday</h1>
+        </a>
+      </header>
+
+      <!-- the collapsed nav -->
+
+      <nav class="navigation m-2 container" id="collapsed">
+        <div class="profile__container_mobile is-rounded">
+          <figure class="profile__figure image is-128x128">
+            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="is-rounded"
+              id="profile__image" />
+          </figure>
+
+        </div>
+        <div id="button-holder">
+          <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+            id="savedPosts" onclick="window.location.href='saved-posts.html'">
+            Bookmarks
+          </button>
+          <button class="side__button__mobile nav__button button is-rounded m-2 has-text-weight-semibold" id="cotd"
+            onclick="window.location.href='cotd.html'">
+            Cat of the Day</button>
+          <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+            id="savedPosts" onclick="window.location.href='saved-posts.html'">Latest Mews</button>
+        </div>
+      </nav>
+
+
+      <!-- Main post body -->
+      <section class="feed m-2 p-6">
+        <!-- Post cards -->
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4" id="">username</p>
+                <p class="subtitle is-6">breed type</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <p>"hbosfjgfhfogfhh "</p>
+              <time datetime="2016-1-1">current date with JS</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+        <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="is-rounded"
+                    id="generated__pfp" />
+                </figure>
+              </div>
+              <div class="media__content">
+                <p class="title is-4">John Smith</p>
+                <p class="subtitle is-6">@johnsmith</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris adding a ton of content here to see if the card size will change with that I
+              am just going to keep adding things until it gets to two lines and see what happens.<a>@bulmaio</a>.
+              <a href="#">#css</a>
+              <a href="#">#responsive</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+      </section>
+    </main>
+  </div>
+  <footer class="footer">
+    <button class="button" id="pageRefresh" onclick="window.location.href='index.html'">
+      More Hiss-terical Posts
+    </button>
+  </footer>
+
+
+  <div id="profile-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <image class="your-profile-picture"
+        src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
+        alt="a cat" />
+      <div class="info-card">
+        <div class="name-box">
+          <input class="input is-large name-space" type="text" placeholder="Large input">
+          <button class="name-save">save username</button>
+        </div>
+        <div class="option-holder">
+          <div class="bio-box control">
+            <input class=" bio-box__input" type="text" placeholder="Add your bio!">
+            <button class="save-bio">save bio</button>
+          </div>
+          <div class="theme-box level-item level-right">
+            <div class="switch">
+              <p>Theme: </p>
+              <select class="theme-select" name="theme-select" id="theme-select">
+                <option value="berry" id="theme-select__option">Berry</option>
+                <option value="warm" id="theme-select__option">Warm</option>
+                <option value="dark" id="theme-select__option">Dark</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-pic__options">
+        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
+          class="profile-pic__option is-rounded" />
+        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
+          class="profile-pic__option is-rounded" />
+        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
+          class="profile-pic__option is-rounded" />
+      </div>
     </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
 
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    <script src="moe.js"></script>
-    <script src="/assets/js/script.js"></script>
+  <script src="moe.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-  </body>
+</body>
+
 </html>
