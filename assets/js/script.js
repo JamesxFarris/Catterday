@@ -165,3 +165,17 @@ function generateCatInfo(data) {
   }
 }
 generateCatAPI();
+
+// GET AND APPEND CURRENT DATE TO CARDS WITH JS
+let today = dayjs().format(' - MMM DD, YYYY');
+console.log(today);
+let currentDateNodes = document.querySelectorAll('.currentday');
+console.log(currentDateNodes);
+for(i=0; i < currentDateNodes.length; i++) {
+  currentDateNodes[i].textContent = today;
+}
+
+//let currentDates = Array.from(currentDateNodes);
+//console.log(currentDates);
+//console.log(currentDate);
+//currentDates.forEach(textContent = today);
