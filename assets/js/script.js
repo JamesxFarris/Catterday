@@ -100,21 +100,68 @@ function generateCatAPI() {
 
 // Image Generation 1-10
 function generateCatInfo(data) {
-  console.log("generate info: " + data);
-  for (let i = 0; i < 10; i++) {
-    const generatedPFP = document.querySelectorAll("generated__pfp");
+  console.log(data);
+  let feedCards = [
+    {
+      cardnum: 1,
+      listnum: 0,
+    },
+    {
+      cardnum: 2,
+      listnum: 1,
+    },
+    {
+      cardnum: 3,
+      listnum: 2,
+    },
+    {
+      cardnum: 4,
+      listnum: 3,
+    },
+    {
+      cardnum: 5,
+      listnum: 4,
+    },
+    {
+      cardnum: 6,
+      listnum: 5,
+    },
+    {
+      cardnum: 7,
+      listnum: 6,
+    },
+    {
+      cardnum: 8,
+      listnum: 7,
+    },
+    {
+      cardnum: 9,
+      listnum: 8,
+    },
+    {
+      cardnum: 10,
+      listnum: 9,
+    },
+  ];
+  let finalCard = feedCards.length;
+  let currentCardI = 0;
+  for (currentCardI; currentCardI < finalCard; currentCardI++) {
+    let currentCardNum = feedCards[currentCardI].cardnum;
+    let currentListNum = feedCards[currentCardI].listnum;
+    //const generatedPFP = document.querySelectorAll("generated__pfp1");
+    let generatedPFP = document.getElementById(
+      "generated__pfp" + currentCardNum
+    );
+    let breedCont = document.getElementById("breedcont" + currentCardNum);
+    /*let test = "generated__pfp" + currentCardNum;
+    console.log(test);*/
+    generatedPFP.setAttribute("src", data[currentListNum].url);
 
-    // fetch
-    /*fetch(API_URL)
-    .then((response) => response.JSON)
-
-    // pull data and change source
-    .then((data) => {
-      const pfpURL = data[0].url;
-      generatedPFP.src = pfpURL;
-    });*/
-
+    console.log(data[currentListNum].url);
+    breedCont.innerHTML = data[currentListNum].breeds[0].name;
+    console.log(data[currentListNum].breeds[0].name);
     // apply image to pfps
+    //apply breed type to card
   }
 }
 generateCatAPI();
