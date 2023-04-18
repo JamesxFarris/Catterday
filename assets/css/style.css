@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap');
+
+:root {
+  --primary-font-style: 'Bungee Shade', cursive;;
+  --secondary-font-style: 'Montserrat', sans-serif;;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,12 +12,15 @@
 h1 {
   font-size: 700%;
 }
+
 h2 {
   font-size: 225%;
 }
+
 h3 {
   font-size: 200%;
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -21,6 +31,10 @@ header {
   border-style: solid;
   border-width: 2px;
   height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: var(--primary-font-style);
+  color: black;
 }
 
 aside {
@@ -34,7 +48,7 @@ aside {
 }
 
 nav {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   background-color: var(--primary-frame);
   border: black;
@@ -43,10 +57,12 @@ nav {
   width: 100%;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 footer {
@@ -60,6 +76,7 @@ footer {
   flex-direction: row;
   min-height: 100vh;
 }
+
 .main__container {
   display: flex;
   flex-direction: column;
@@ -81,6 +98,7 @@ footer {
   padding: 0.5rem;
   margin: 1rem;
 }
+
 .profile__container_mobile {
   display: flex;
   flex-direction: column;
@@ -94,6 +112,7 @@ footer {
   padding: 0.5rem;
   margin: 1rem;
 }
+
 .profile__figure {
   width: 60%;
   height: 60%;
@@ -119,8 +138,13 @@ footer {
 }
 
 .side__button__mobile {
-  width: 100px;
-  height: 3rem;
+  min-width: 300px;
+  min-height: 3rem;
+}
+
+#button-holder {
+  display: flex;
+  flex-flow: column;
 }
 
 .feed {
@@ -146,20 +170,16 @@ footer {
   background-color: white;
   padding: 1.5rem;
 }
+
 .content {
   background-color: var(--primary-card);
   padding: 1.5rem;
 }
+
 .card-content {
   padding: 0px;
 }
-.nav__button {
-  /*border: grey;
-  border-style: solid;
-  border-width: 2px;*/
-  font-size: 1.5vw;
-}
-/**/
+
 
 /* Media Queries */
 @media only screen and (min-width: 1200px) {
@@ -205,6 +225,7 @@ body {
   width: 100%;
   border-bottom-left-radius: 20px;
 }
+
 .theme-box {
   width: 50%;
   height: 100%;
@@ -214,6 +235,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .switch {
   border-bottom-right-radius: 20px;
 
@@ -226,12 +248,14 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 .bio-box__input {
   border: solid;
   border-style: solid none none solid;
   width: 100%;
   height: 75%;
 }
+
 .save-bio {
   height: 25%;
   width: 100%;
@@ -240,6 +264,7 @@ body {
   border-bottom-left-radius: 20px;
   background-color: #c8dafa;
 }
+
 .name-space {
   border: solid;
   border-style: solid solid solid solid;
@@ -256,10 +281,12 @@ body {
   text-align: center;
   background-color: #c8dafa;
 }
+
 .bio-box {
   max-height: 128px;
   max-width: 50%;
 }
+
 .theme-select {
   width: 50%;
   height: 30%;
@@ -268,6 +295,7 @@ body {
   margin: 10px auto;
   background-color: #c8dafa;
 }
+
 .profile-pic__options {
   display: flex;
   align-items: flex-start;
@@ -275,6 +303,7 @@ body {
   width: 100%;
   flex-wrap: wrap;
 }
+
 .profile-pic__option {
   border-radius: 50%;
   width: 96px;
@@ -289,18 +318,33 @@ body {
     flex-flow: column;
     align-items: center;
   }
+  h1 {
+    font-size: 500%;
+  }
+  
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .modal-content {
     width: 95%;
     height: 100%;
   }
+
   .theme-select {
     width: 80%;
   }
+
   aside {
     display: none;
+  }
+  nav {
+    display: flex;
+  }
+  .main__container {
+    width: 100%
+  }
+  h1 {
+    font-size: 500%;
   }
 }
 
@@ -319,6 +363,12 @@ aside {
 
 .side__button {
   background-color: var(--primary-card);
+  border: 2px solid;
+}
+
+.side__button__mobile {
+  background-color: var(--primary-card);
+  border: 2px solid;
 }
 
 @media (max-width: 600px) {
@@ -326,11 +376,22 @@ aside {
     max-width: 50%;
     max-height: 50%;
   }
+
   .modal-content {
     flex-flow: column;
     align-items: center;
   }
+
   .info-card {
     max-width: 100%;
+  }
+  h1 {
+    font-size: 300%;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 200%;
   }
 }
