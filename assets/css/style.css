@@ -34,9 +34,11 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: var(--primary-font-style);
-  color: black;
+  color: var(--primary-font-color);
 }
-
+.page__name {
+  color:var(--primary-font-color);
+}
 aside {
   border: black;
   border-style: solid;
@@ -205,7 +207,7 @@ body {
 .modal-content {
   height: 60%;
   width: 750px;
-  background-color: #dae9d4;
+  background-color: var(--primary-profile);
   border-radius: 80px;
   display: flex;
   flex-flow: row wrap;
@@ -270,9 +272,10 @@ body {
   border: solid;
   border-style: solid none solid solid;
   border-bottom-left-radius: 20px;
-  background-color: #c8dafa;
 }
-
+.save-bio, .name-save, .theme-select {
+  background-color:var(--primary-card);
+}
 .name-space {
   border: solid;
   border-style: solid solid solid solid;
@@ -287,7 +290,6 @@ body {
   height: 30%;
   width: 100%;
   text-align: center;
-  background-color: #c8dafa;
 }
 
 .bio-box {
@@ -301,7 +303,6 @@ body {
   border: solid;
   border-radius: 10px;
   margin: 10px auto;
-  background-color: #c8dafa;
 }
 
 .profile-pic__options {
