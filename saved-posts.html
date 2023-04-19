@@ -28,38 +28,25 @@
         <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
           <!-- user profile pic stand in-->
           <figure class="profile__figure image">
-            <img
-              src="https://bulma.io/images/placeholders/128x128.png"
-              alt="Placeholder image"
-              class="is-rounded"
-              id="profile__image"
-            />
+            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image profile__image-main is-rounded"
+              id="profile__image" />
           </figure>
-          <div class="profile__username is-rounded">
-            <p>Username Stand-in</p>
+          <div class="profile__username is-rounded mt-2">
+            <p class="profile__usernameinput">Username Stand-in</p>
           </div>
         </div>
-
-        <button
-          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
-          id="savedPosts"
-          onclick="window.location.href='saved-posts.html'"
-        >
+  
+        <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
+          onclick="window.location.href='saved-posts.html'">
           Bookmarks
         </button>
-        <button
-          class="button side__button nav__button is-rounded m-2 has-text-weight-semibold"
-          id="cotd"
-          onclick="window.location.href='cotd.html'"
-        >
+        <button class="button side__button nav__button is-rounded m-2 has-text-weight-semibold" id="cotd"
+          onclick="window.location.href='cotd.html'">
           Cat of the Day
         </button>
-
-        <button
-          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
-          id="savedPosts"
-          onclick="window.location.href='404.html'"
-        >
+  
+        <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
+          onclick="window.location.href='404.html'">
           Latest Mews
         </button>
 
@@ -68,17 +55,77 @@
       <main class="main__container">
         <!-- Header text -->
         <header class="m-2 is-clipped">
-          <a href="/index.html"
+          <a href="./index.html"
             ><h1 class="page__name is-size-1-mobile">Catterday</h1></a
           >
         </header>
+        <nav class="navigation m-2 container  js-modal-trigger" data-target="profile-modal" id="collapsed">
+          <div class="profile__container_mobile is-rounded">
+            <figure class="profile__figure image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image is-rounded"
+                id="profile__image" />
+            </figure>
+            <div class="profile__username is-rounded  mt-2">
+              <p class="profile__usernameinput">Username Stand-in</p>
+            </div>
+          </div>
+          <div id="button-holder">
+            <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+              id="savedPosts" onclick="window.location.href='saved-posts.html'">
+              Bookmarks
+            </button>
+            <button class="side__button__mobile nav__button button is-rounded m-2 has-text-weight-semibold" id="cotd"
+              onclick="window.location.href='cotd.html'">
+              Cat of the Day</button>
+            <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+              id="savedPosts" onclick="window.location.href='saved-posts.html'">Latest Mews</button>
+          </div>
+        </nav>
+        <section class="feed m-2 p-6">
+
+        </section>
       </main>
-    </body>
+      <div id="profile-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
+          <div class="info-card">
+            <div class="name-box">
+              <input class="input is-large name-space" type="text" placeholder="Large input">
+              <button class="name-save">save username</button>
+            </div>
+            <div class="option-holder">
+              <div class="bio-box control">
+                <input class=" bio-box__input" type="text" placeholder="Add your bio!">
+                <button class="save-bio">save bio</button>
+              </div>
+              <div class="theme-box level-item level-right">
+                <div class="switch">
+                  <p>Theme: </p>
+                  <select class="theme-select" name="theme-select" id="theme-select">
+                    <option value="berry" id="theme-select__option">Berry</option>
+                    <option value="warm" id="theme-select__option">Warm</option>
+                    <option value="dark" id="theme-select__option">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-pic__options">
+            <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded" />
+    
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+        
+      </div>
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="moe.js"></script>
     <script src="./assets/js/script.js"></script>
-
+    </body>
     </html>
