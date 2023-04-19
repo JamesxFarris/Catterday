@@ -185,6 +185,10 @@ img.profile__image-main {
   height: fit-content;
   margin-bottom: 3rem;
 }
+.fa-paw {
+  color:var(--primary-bookmark);
+  align-self:flex-end;
+}
 
 #generated__pfp1, #generated__pfp2, #generated__pfp3, #generated__pfp4, #generated__pfp5, #generated__pfp6, #generated__pfp7, #generated__pfp8, #generated__pfp9, #generated__pfp10 {
   object-fit: cover;
@@ -202,6 +206,8 @@ img.profile__image-main {
 .content {
   background-color: var(--primary-card);
   padding: 1.5rem;
+  display:flex;
+  flex-direction:column;
 }
 
 .card-content {
