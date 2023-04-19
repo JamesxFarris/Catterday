@@ -165,3 +165,15 @@ function generateCatInfo(data) {
   }
 }
 generateCatAPI();
+
+// Favorites Button with a forEach toggle
+
+// Scroll to Top Button
+
+document.getElementById("top-scroll").onclick = function () {
+  topFunction();
+};
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
