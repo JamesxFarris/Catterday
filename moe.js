@@ -1,4 +1,4 @@
-
+// dad joke api 
 function fetchAPI(){
   
   fetch("https://icanhazdadjoke.com/",{
@@ -22,7 +22,7 @@ document.getElementById('btn').addEventListener('click', fetchAPI);
 
       
 
-      
+
       
       
       
