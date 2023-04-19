@@ -194,6 +194,9 @@ function initProfileSelector(){
       activatePFP(localStorage.getItem("pfpsrc"));
     });
     activatePFP(currentPfp);
+    if(currentPfp === null) {
+      activatePFP('https://bulma.io/images/placeholders/96x96.png');
+    }
   }
 };
 initProfileSelector();
@@ -217,6 +220,9 @@ function initUsernameSelector() {
     activateUsername(localStorage.getItem('userpassword'));
   });
   activateUsername(currentUsername);
+  if(currentUsername===null){
+    activateUsername('Customize Profile!');
+  }
 };
 initUsernameSelector();
 
@@ -235,6 +241,9 @@ function initSaveBio() {
     activateBio(currentBio);
   });
   activateBio(currentBio);
+  if(currentBio === null){
+    activateBio('Save a username and bio!')
+  }
 };
 initSaveBio();
 //let currentDates = Array.from(currentDateNodes);
