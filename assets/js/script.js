@@ -197,6 +197,46 @@ function initProfileSelector(){
   }
 };
 initProfileSelector();
+
+function initUsernameSelector() {
+  let usernameSaveButton = document.querySelector('.name-save');
+  let userPasswordEntryCont = document.querySelector('.name-space');
+  let currentUsername = localStorage.getItem('userpassword');
+  let usernameInputs = document.querySelectorAll('.profile__usernameinput');
+  function activateUsername(usernameval){
+    for(let usernameI=0; usernameI < usernameInputs.length; usernameI++){
+      usernameInputs[usernameI].textContent= usernameval;
+      userPasswordEntryCont.setAttribute('placeholder', usernameval);
+    }
+  };
+  usernameSaveButton.addEventListener('click', function(){
+    console.log('user save clicked');
+    let userPasswordEntry = $(userPasswordEntryCont).val();
+    console.log(userPasswordEntry);
+    localStorage.setItem('userpassword', userPasswordEntry);
+    activateUsername(localStorage.getItem('userpassword'));
+  });
+  activateUsername(currentUsername);
+};
+initUsernameSelector();
+
+function initSaveBio() {
+  let saveBioButton = document.querySelector('.save-bio');
+  let bioCont= document.querySelector('.bio-box__input');
+  let currentBio= localStorage.getItem('userbio');
+  function activateBio(bioval){
+    bioCont.setAttribute('placeholder', bioval);
+    }
+  saveBioButton.addEventListener('click', function(){
+    console.log('bio clicked');
+    let userBioEntry=$(bioCont).val();
+    console.log(userBioEntry);
+    localStorage.setItem('userbio', userBioEntry);
+    activateBio(currentBio);
+  });
+  activateBio(currentBio);
+};
+initSaveBio();
 //let currentDates = Array.from(currentDateNodes);
 //console.log(currentDates);
 //console.log(currentDate);
