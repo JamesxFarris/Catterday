@@ -166,6 +166,15 @@ function generateCatInfo(data) {
 }
 generateCatAPI();
 
+// Scroll to Top Button
+
+document.getElementById("top-scroll").onclick = function () {
+  topFunction();
+};
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
 
 const catUsernames = [
   "Kitty_Cat39",
@@ -220,3 +229,4 @@ const randomIndex = Math.floor(Math.random() * catUsernames.length);
 const randomItem = catUsernames[randomIndex];
 const randomItemElement = document.getElementById("generatedUsername");
 randomItemElement.textContent = randomItem;
+
