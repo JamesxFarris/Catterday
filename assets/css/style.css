@@ -175,7 +175,6 @@ img.profile__image-main {
 }
 
 .card {
-  width: 100%;
   height: fit-content;
   border: grey;
   border-style: solid;
@@ -184,6 +183,9 @@ img.profile__image-main {
   overflow-y: scroll;
   height: fit-content;
   margin-bottom: 3rem;
+}
+.cardM {
+    width:100%;
 }
 .fa-paw {
   color:var(--primary-bookmark);
@@ -217,7 +219,7 @@ img.profile__image-main {
 
 /* Media Queries */
 @media only screen and (min-width: 1200px) {
-  .card {
+  .cardM {
     width: 85%;
   }
 }
