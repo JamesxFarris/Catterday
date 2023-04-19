@@ -175,6 +175,28 @@ for(i=0; i < currentDateNodes.length; i++) {
   currentDateNodes[i].textContent = today;
 }
 
+function initProfileSelector(){
+  let profileOptions = document.querySelectorAll('.profile-pic__option');
+  let profilePictures = document.querySelectorAll('.profile__image');
+  let currentPfp = localStorage.getItem("pfpsrc");
+  console.log('getitem return: ' + currentPfp);
+  function activatePFP (pfpsrc) {
+    for(let profilePicturesI = 0; profilePicturesI < profilePictures.length; profilePicturesI++) {
+      profilePictures[profilePicturesI].setAttribute('src', pfpsrc);
+    }
+  };
+  for(let i=0; i < profileOptions.length; i++) {
+    profileOptions[i].addEventListener('click', function(){
+      console.log('test');
+      let pfpSrcInput = profileOptions[i].getAttribute('src');
+      console.log(pfpSrcInput);
+      localStorage.setItem("pfpsrc", pfpSrcInput);
+      activatePFP(localStorage.getItem("pfpsrc"));
+    });
+    activatePFP(currentPfp);
+  }
+};
+initProfileSelector();
 //let currentDates = Array.from(currentDateNodes);
 //console.log(currentDates);
 //console.log(currentDate);
