@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap");
 
 :root {
-  --primary-font-style: 'Bungee Shade', cursive;;
-  --secondary-font-style: 'Montserrat', sans-serif;;
+  --primary-font-style: "Bungee Shade", cursive;
+  --secondary-font-style: "Montserrat", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -157,6 +161,29 @@ img.profile__image-main {
   height: 3rem;
 }
 
+.stick1 {
+  position: sticky;
+  top: 2rem;
+}
+
+.stick2 {
+  position: sticky;
+  top: 6rem;
+}
+
+.stick3 {
+  position: sticky;
+  top: 10rem;
+}
+
+.cat__icon {
+  width: 10rem;
+  height: 10rem;
+  margin-top: 80%;
+  position: sticky;
+  top: 45%;
+}
+
 .side__button__mobile {
   min-width: 300px;
   min-height: 3rem;
@@ -243,7 +270,6 @@ img.profile__image-main {
 .card-content {
   padding: 0px;
 }
-
 
 /* Media Queries */
 @media only screen and (min-width: 1200px) {
@@ -384,9 +410,11 @@ body {
   h1 {
     font-size: 500%;
   }
+
   .bookmarkcard {
     width:45%;
-  }
+   }
+
 }
 
 @media (max-width: 800px) {
@@ -406,7 +434,7 @@ body {
     display: flex;
   }
   .main__container {
-    width: 100%
+    width: 100%;
   }
   h1 {
     font-size: 500%;
@@ -475,3 +503,5 @@ aside {
     width:80%;
   }
 }
+}
+

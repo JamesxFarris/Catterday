@@ -166,6 +166,7 @@ function generateCatInfo(data) {
 }
 generateCatAPI();
 
+
 // GET AND APPEND CURRENT DATE TO CARDS WITH JS
 let today = dayjs().format(' - MMM DD, YYYY');
 console.log(today);
@@ -250,3 +251,68 @@ initSaveBio();
 //console.log(currentDates);
 //console.log(currentDate);
 //currentDates.forEach(textContent = today);
+
+// Scroll to Top Button
+
+document.getElementById("top-scroll").onclick = function () {
+  topFunction();
+};
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+
+const catUsernames = [
+  "Kitty_Cat39",
+  "Fluffy_Cat32",
+  "Mewcat1000",
+  "Kitten_Hiss09",
+  "Mewman25",
+  "Fluffykitty99",
+  "Catdude01",
+  "Fluffyfluff_08",
+  "Cuddles771",
+  "Meow_Meow1",
+  "Da_Best_Cat2",
+  "The_Cat_Man8",
+  "Cat_on_here556",
+  "Scratchthecat4",
+  "Post_Mewlone",
+  "Litterbug02",
+  "MewCatMew5",
+  "The_Katt_Cat",
+  "Fluffy_Mike66",
+  "Catman_Stan34",
+  "Thisbowlisempty",
+  "Meowsat3amlive",
+  "The_Cat_is_Back",
+  "Thereturnofthekitten",
+  "Cuddlebug33",
+  "CatsWeeklyOffical",
+  "Catsweekly_real42",
+  "Fluff_Stuff899",
+  "Cathy56",
+  "CathleticCo",
+  "TodayinHisstory",
+  "HissingHeather09",
+  "MarlinLeMew77",
+  "John-Catams",
+  "William-Howard-Cat",
+  "Sir-Isaac-Mewton",
+  "Amewlia-Earhart",
+  "Catpurrnicus",
+  "Mewoses",
+  "Cleocatra",
+  "Hisston-Churchill",
+  "Oedipuss",
+  "William-Shakespaw",
+  "Mewlius-Caesar",
+  "Genghis-Kat",
+  "Marie-Purrie",
+  "Furrdinand-Marcos",
+];
+const randomIndex = Math.floor(Math.random() * catUsernames.length);
+const randomItem = catUsernames[randomIndex];
+const randomItemElement = document.getElementById("generatedUsername");
+randomItemElement.textContent = randomItem;
+
