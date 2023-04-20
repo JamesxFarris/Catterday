@@ -22,11 +22,11 @@
       <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
         <!-- user profile pic stand in-->
         <figure class="profile__figure image">
-          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="is-rounded"
+          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image profile__image-main is-rounded"
             id="profile__image" />
         </figure>
-        <div class="profile__username is-rounded">
-          <p>Username Stand-in</p>
+        <div class="profile__username is-rounded mt-2">
+          <p class="profile__usernameinput">Username Stand-in</p>
         </div>
       </div>
 
@@ -56,13 +56,15 @@
 
       <!-- the collapsed nav -->
 
-      <nav class="navigation m-2 container" id="collapsed">
+      <nav class="navigation m-2 container  js-modal-trigger" data-target="profile-modal" id="collapsed">
         <div class="profile__container_mobile is-rounded">
           <figure class="profile__figure image is-128x128">
-            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="is-rounded"
+            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image is-rounded"
               id="profile__image" />
           </figure>
-
+          <div class="profile__username is-rounded  mt-2">
+            <p class="profile__usernameinput">Username Stand-in</p>
+          </div>
         </div>
         <div id="button-holder">
           <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
@@ -82,7 +84,7 @@
         <!-- Main post body -->
         <section class="feed m-2 p-6">
           <!-- Post cards -->
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -98,13 +100,14 @@
               </div>
   
               <div class="content">
-                <p>"hbosfjgfhfogfhh "</p>
-                <time datetime="2016-1-1">current date with JS</time>
+                <p class="content-input">"hbosfjgfhfogfhh "</p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -120,17 +123,14 @@
               </div>
   
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -145,17 +145,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -170,17 +167,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -195,17 +189,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -220,17 +211,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -245,17 +233,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -270,17 +255,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -295,17 +277,14 @@
                 </div>
               </div>
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
           </div>
   
-          <div class="card is-half-desktop is-centered overflow-auto is-clipped">
+          <div class="card is-half-desktop is-centered overflow-auto is-clipped cardM">
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -321,13 +300,9 @@
               </div>
   
               <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris adding a ton of content here to see if the card size will change with that I
-                am just going to keep adding things until it gets to two lines and see what happens.<a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <p class="content-input"></p>
+                <time class="currentday"></time>
+                <i class="fa-solid fa-paw fa-2xl"></i>
               </div>
             </div>
         </section>
@@ -340,19 +315,22 @@
       <!-- end of dad joke button -->
     </div>
     <footer class="footer">
-      <div>
-        <button class="button mt-5 bottom__btn"
-          id ="top-scroll">
-          Back to top ↑
-        </button>
-        <button
-         class="button mt-5 bottom__btn"
-          id="pageRefresh"
-          onclick="window.location.href='index.html'"
-        >
+
+      <button
+        class="button m-2"
+        id="pageRefresh"
+        onclick="window.location.href='index.html'"
+      >
         More Hiss-terical Posts
       </button>
-    </div>
+      <button class="button m-2" id="backToTop" onclick="document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;">Back to Top</button>
+      <small>
+        <p>©CATTERDAY | University of Minnesota Bootcamp</p>
+      </small>
+
+ 
+
     </footer>
     
 
@@ -361,7 +339,7 @@
   <div id="profile-modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <image class="your-profile-picture"
+      <image class="your-profile-picture profile__image"
         src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
         alt="a cat" />
       <div class="info-card">
@@ -380,9 +358,9 @@
             <div class="switch">
               <p>Theme: </p>
               <select class="theme-select" name="theme-select" id="theme-select">
-                <option value="berry" id="theme-select__option">Berry</option>
-                <option value="warm" id="theme-select__option">Warm</option>
-                <option value="dark" id="theme-select__option">Dark</option>
+                <option value="berry" id="theme-select__option1">Berry</option>
+                <option value="warm" id="theme-select__option2">Warm</option>
+                <option value="dark" id="theme-select__option3">Dark</option>
               </select>
             </div>
           </div>
@@ -390,9 +368,9 @@
         </div>
       </div>
       <div class="profile-pic__options">
-        <img src="https://www.thesprucepets.com/thmb/j-UAD2P3BYKmkvyCoujj5hPgq04=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/guide-to-cat-eyes-552114-hero-75d820458de24543a35543a584b9eec6.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
-        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-07/black-cat-halloween-mc-220713-02-b10ec0.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
-        <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+        <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
+        <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+        <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded" />
 
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
@@ -404,6 +382,7 @@
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <script src="moe.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/d14b0991e4.js" crossorigin="anonymous"></script>
 
 </body>
 

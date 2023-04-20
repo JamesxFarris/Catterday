@@ -31,12 +31,12 @@
             <img
               src="https://bulma.io/images/placeholders/128x128.png"
               alt="Placeholder image"
-              class="is-rounded"
+              class="profile__image profile__image-main is-rounded"
               id="profile__image"
             />
           </figure>
-          <div class="profile__username is-rounded">
-            <p>Username Stand-in</p>
+          <div class="profile__username is-rounded mt-2">
+            <p class="profile__usernameinput">Username Stand-in</p>
           </div>
         </div>
 
@@ -72,6 +72,31 @@
             ><h1 class="page__name is-size-1-mobile">Catterday</h1></a
           >
         </header>
+        <nav class="navigation m-2 container  js-modal-trigger" data-target="profile-modal" id="collapsed">
+          <div class="profile__container_mobile is-rounded">
+            <figure class="profile__figure image is-128x128">
+              <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image is-rounded"
+                id="profile__image" />
+            </figure>
+            <div class="profile__username is-rounded  mt-2">
+              <p class="profile__usernameinput">Username Stand-in</p>
+            </div>
+          </div>
+          <div id="button-holder">
+            <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+              id="savedPosts" onclick="window.location.href='saved-posts.html'">
+              Bookmarks
+            </button>
+            <button class="side__button__mobile nav__button button is-rounded m-2 has-text-weight-semibold" id="cotd"
+              onclick="window.location.href='cotd.html'">
+              Cat of the Day</button>
+            <button class="button side__button__mobile nav__button m-2 is-rounded has-text-weight-semibold"
+              id="savedPosts" onclick="window.location.href='saved-posts.html'">Latest Mews</button>
+          </div>
+        </nav>
+        <section class="feed m-2 p-6">
+
+        </section>
       </main>
       <div id="profile-modal" class="modal">
         <div class="modal-background"></div>
@@ -100,12 +125,13 @@
             </div>
           </div>
           <div class="profile-pic__options">
-            <img src="https://www.thesprucepets.com/thmb/j-UAD2P3BYKmkvyCoujj5hPgq04=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/guide-to-cat-eyes-552114-hero-75d820458de24543a35543a584b9eec6.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
-            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-07/black-cat-halloween-mc-220713-02-b10ec0.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
-            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
-          </div>
+            <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="Profile picture option of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="Profile picture of a cat" class="profile-pic__option is-rounded"/>
+            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Profile picture of a cat" class="profile-pic__option is-rounded" />
+    
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
+        
       </div>
   
   

@@ -166,6 +166,92 @@ function generateCatInfo(data) {
 }
 generateCatAPI();
 
+
+// GET AND APPEND CURRENT DATE TO CARDS WITH JS
+let today = dayjs().format(' - MMM DD, YYYY');
+console.log(today);
+let currentDateNodes = document.querySelectorAll('.currentday');
+console.log(currentDateNodes);
+for(i=0; i < currentDateNodes.length; i++) {
+  currentDateNodes[i].textContent = today;
+}
+
+function initProfileSelector(){
+  let profileOptions = document.querySelectorAll('.profile-pic__option');
+  let profilePictures = document.querySelectorAll('.profile__image');
+  let currentPfp = localStorage.getItem("pfpsrc");
+  console.log('getitem return: ' + currentPfp);
+  function activatePFP (pfpsrc) {
+    for(let profilePicturesI = 0; profilePicturesI < profilePictures.length; profilePicturesI++) {
+      profilePictures[profilePicturesI].setAttribute('src', pfpsrc);
+    }
+  };
+  for(let i=0; i < profileOptions.length; i++) {
+    profileOptions[i].addEventListener('click', function(){
+      console.log('test');
+      let pfpSrcInput = profileOptions[i].getAttribute('src');
+      console.log(pfpSrcInput);
+      localStorage.setItem("pfpsrc", pfpSrcInput);
+      activatePFP(localStorage.getItem("pfpsrc"));
+    });
+    activatePFP(currentPfp);
+    if(currentPfp === null) {
+      activatePFP('https://bulma.io/images/placeholders/96x96.png');
+    }
+  }
+};
+initProfileSelector();
+
+function initUsernameSelector() {
+  let usernameSaveButton = document.querySelector('.name-save');
+  let userPasswordEntryCont = document.querySelector('.name-space');
+  let currentUsername = localStorage.getItem('userpassword');
+  let usernameInputs = document.querySelectorAll('.profile__usernameinput');
+  function activateUsername(usernameval){
+    for(let usernameI=0; usernameI < usernameInputs.length; usernameI++){
+      usernameInputs[usernameI].textContent= usernameval;
+      userPasswordEntryCont.setAttribute('placeholder', usernameval);
+    }
+  };
+  usernameSaveButton.addEventListener('click', function(){
+    console.log('user save clicked');
+    let userPasswordEntry = $(userPasswordEntryCont).val();
+    console.log(userPasswordEntry);
+    localStorage.setItem('userpassword', userPasswordEntry);
+    activateUsername(localStorage.getItem('userpassword'));
+  });
+  activateUsername(currentUsername);
+  if(currentUsername===null){
+    activateUsername('Customize Profile!');
+  }
+};
+initUsernameSelector();
+
+function initSaveBio() {
+  let saveBioButton = document.querySelector('.save-bio');
+  let bioCont= document.querySelector('.bio-box__input');
+  let currentBio= localStorage.getItem('userbio');
+  function activateBio(bioval){
+    bioCont.setAttribute('placeholder', bioval);
+    }
+  saveBioButton.addEventListener('click', function(){
+    console.log('bio clicked');
+    let userBioEntry=$(bioCont).val();
+    console.log(userBioEntry);
+    localStorage.setItem('userbio', userBioEntry);
+    activateBio(currentBio);
+  });
+  activateBio(currentBio);
+  if(currentBio === null){
+    activateBio('Save a username and bio!')
+  }
+};
+initSaveBio();
+//let currentDates = Array.from(currentDateNodes);
+//console.log(currentDates);
+//console.log(currentDate);
+//currentDates.forEach(textContent = today);
+
 // Scroll to Top Button
 
 document.getElementById("top-scroll").onclick = function () {
