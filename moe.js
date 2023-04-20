@@ -1,3 +1,4 @@
+
 // dad joke api 
 function fetchAPI(){
   
@@ -25,5 +26,4 @@ document.getElementById('btn').addEventListener('click', fetchAPI);
 
       
       
-      
-      
+     

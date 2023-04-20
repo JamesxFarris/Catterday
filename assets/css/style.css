@@ -1,16 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap");
+
+:root {
+  --primary-font-style: "Bungee Shade", cursive;
+  --secondary-font-style: "Montserrat", sans-serif;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-size: 700%;
 }
+
 h2 {
   font-size: 225%;
 }
+
 h3 {
   font-size: 200%;
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -21,61 +35,121 @@ header {
   border-style: solid;
   border-width: 2px;
   height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: var(--primary-font-style);
+  color: var(--primary-font-color);
 }
-
+.page__name {
+  color:var(--primary-font-color);
+}
 aside {
   border: black;
   border-style: solid;
   border-width: 2px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: none;
+  flex-flow: row wrap;
+  background-color: var(--primary-frame);
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 footer {
   display: flex;
+  flex-direction:column;
   justify-content: center;
+  align-items:center;
 }
-
+#pageRefresh, #backToTop {
+  width:30%;
+  border:solid;
+  border-radius:20px;
+  background-color:var(--primary-card);
+}
 /*layout of page*/
 .page__container {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
 }
+
 .main__container {
   display: flex;
   flex-direction: column;
   width: 85%;
 }
-.navigation {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 /*PROFILE STYLING*/
 .profile__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 85%;
   background-color: var(--primary-profile);
   border-width: 1px;
   border-style: solid;
   border-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
 }
-.profile-figure {
-  width: 45%;
+
+.profile__container_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-profile);
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
 }
+
+.profile__figure {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+.profile__image-main {
+  object-fit:cover;
+}
+img.profile__image-main {
+  height:80px;
+  width:80px;
+};
+/*figure.is-128x128 {
+  height:80px;
+  width:80px;
+}*/
 
 .profile__username {
   display: flex;
   /*width: 90%;*/
   height: 50px;
-  border: black;
-  border-style: solid;
+  /*border: black;
+  border-style: solid;*/
   border-width: 1px;
   text-align: center;
   justify-content: center;
@@ -87,6 +161,39 @@ footer {
   height: 3rem;
 }
 
+.stick1 {
+  position: sticky;
+  top: 2rem;
+}
+
+.stick2 {
+  position: sticky;
+  top: 6rem;
+}
+
+.stick3 {
+  position: sticky;
+  top: 10rem;
+}
+
+.cat__icon {
+  width: 10rem;
+  height: 10rem;
+  margin-top: 80%;
+  position: sticky;
+  top: 45%;
+}
+
+.side__button__mobile {
+  min-width: 300px;
+  min-height: 3rem;
+}
+
+#button-holder {
+  display: flex;
+  flex-flow: column;
+}
+
 .feed {
   display: flex;
   flex-direction: column;
@@ -95,7 +202,6 @@ footer {
 }
 
 .card {
-  width: 100%;
   height: fit-content;
   border: grey;
   border-style: solid;
@@ -105,34 +211,242 @@ footer {
   height: fit-content;
   margin-bottom: 3rem;
 }
-
-.nav__button {
-  /*border: grey;
-  border-style: solid;
-  border-width: 2px;*/
-  font-size: 1.5vw;
+.cardM {
+    width:100%;
+  
 }
-/**/
+.bookmarkcard {
+  margin:1rem;
+  padding:2rem;
+  width:25%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.bookmarkfeed {
+  display:flex;
+  flex-flow:wrap row;
+  justify-content:center;
+  height:100%;
+}
+.bookmarkImage {
+  width:75px;
+  height:75px;
+  border:none;
+  border-radius:50%;
+}
+.bookmarkuser {
+  font-size: 150%;
+  font-weight:bolder;
+}
+.bookmarkbreed{
+  font-size:125%;
+}
+.fa-paw {
+  color:var(--primary-bookmark);
+  align-self:flex-end;
+}
 
+#generated__pfp1, #generated__pfp2, #generated__pfp3, #generated__pfp4, #generated__pfp5, #generated__pfp6, #generated__pfp7, #generated__pfp8, #generated__pfp9, #generated__pfp10 {
+  object-fit: cover;
+  height:75px;
+}
+.image.is-48x48 {
+  width:75px;
+}
+
+.media {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.content {
+  background-color: var(--primary-card);
+  padding: 1.5rem;
+  display:flex;
+  flex-direction:column;
+}
+
+.card-content {
+  padding: 0px;
+}
+
+/* Media Queries */
 @media only screen and (min-width: 1200px) {
-  .card {
+  .cardM {
     width: 85%;
   }
 }
-/* Colors for reference (Probably gonna do this the way Austin said. It will
-be in a seperate CSS file) */
 
+/* Color declarations */
 body {
   background-color: var(--primary-background-color);
+}
+
+/*MODAL STYLING*/
+.modal-content {
+  height: 60%;
+  width: 750px;
+  background-color: var(--primary-profile);
+  border-radius: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px 10px;
+}
+
+.your-profile-picture {
+  border-radius: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  margin: 5%;
+}
+
+.info-card {
+  display: flex;
+  flex-flow: column;
+  max-width: 50%;
+  margin-top: 6%;
+}
+
+.option-holder {
+  display: flex;
+  flex-flow: row;
+  min-width: 50%;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+}
+
+.theme-box {
+  width: 50%;
+  height: 100%;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  border-bottom-right-radius: 20px;
+
+  background-color: white;
+  min-height: 128px;
+  border: solid;
+  min-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bio-box__input {
+  border: solid;
+  border-style: solid none none solid;
+  width: 100%;
+  height: 75%;
+}
+
+.save-bio {
+  height: 25%;
+  width: 100%;
+  border: solid;
+  border-style: solid none solid solid;
+  border-bottom-left-radius: 20px;
+}
+.save-bio, .name-save, .theme-select {
+  background-color:var(--primary-card);
+}
+.name-space {
+  border: solid;
+  border-style: solid solid solid solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.name-save {
+  border: solid;
+  border-style: none solid none solid;
+  margin: 0;
+  height: 30%;
+  width: 100%;
+  text-align: center;
+}
+
+.bio-box {
+  max-height: 128px;
+  max-width: 50%;
+}
+
+.theme-select {
+  width: 50%;
+  height: 30%;
+  border: solid;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.profile-pic__options {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.profile-pic__option {
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  padding: 5px;
+}
+
+@media (max-width: 1100px) {
+  .modal-content {
+    height: 70%;
+    width: 750px;
+    flex-flow: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 500%;
+  }
+
+  .bookmarkcard {
+    width:45%;
+   }
+
+}
+
+@media (max-width: 800px) {
+  .modal-content {
+    width: 95%;
+    height: 100%;
+  }
+
+  .theme-select {
+    width: 80%;
+  }
+
+  aside {
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+  .main__container {
+    width: 100%;
+  }
+  h1 {
+    font-size: 500%;
+  }
+  #pageRefresh, #backToTop {
+    width:50%;
+  }
 }
 
 header,
 aside {
   background-color: var(--primary-frame);
-}
-
-.card {
-  background: linear-gradient(180deg, white 50%, var(--primary-card) 50%);
 }
 
 .profile__username {
@@ -145,4 +459,49 @@ aside {
 
 .side__button {
   background-color: var(--primary-card);
+  border: 2px solid;
 }
+
+.side__button__mobile {
+  background-color: var(--primary-card);
+  border: 2px solid;
+}
+
+@media (max-width: 600px) {
+  .your-profile-picture {
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+  .modal-content {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .info-card {
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 300%;
+  }
+  #pageRefresh, #backToTop {
+    width:70%;
+  }
+  .bookmarkcard {
+    width:90%;
+  }
+  .bookmarkfeed {
+    flex-flow:nowrap column;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 200%;
+  }
+  #pageRefresh, #backToTop {
+    width:80%;
+  }
+}
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catterday.gov Bookmarks</title>
+    <title>Catterday.gov Cat of the Day</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link
       rel="stylesheet"
@@ -28,25 +28,38 @@
         <div class="profile__container is-rounded js-modal-trigger" data-target="profile-modal">
           <!-- user profile pic stand in-->
           <figure class="profile__figure image">
-            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image" class="profile__image profile__image-main is-rounded"
-              id="profile__image" />
+            <img
+              src="https://bulma.io/images/placeholders/128x128.png"
+              alt="Placeholder image"
+              class="profile__image profile__image-main is-rounded"
+              id="profile__image"
+            />
           </figure>
           <div class="profile__username is-rounded mt-2">
             <p class="profile__usernameinput">Username Stand-in</p>
           </div>
         </div>
-  
-        <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
-          onclick="window.location.href='saved-posts.html'">
+
+        <button
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
+          id="savedPosts"
+          onclick="window.location.href='saved-posts.html'"
+        >
           Bookmarks
         </button>
-        <button class="button side__button nav__button is-rounded m-2 has-text-weight-semibold" id="cotd"
-          onclick="window.location.href='cotd.html'">
+        <button
+          class="button side__button nav__button is-rounded m-2 has-text-weight-semibold"
+          id="cotd"
+          onclick="window.location.href='cotd.html'"
+        >
           Cat of the Day
         </button>
-  
-        <button class="button side__button nav__button m-2 is-rounded has-text-weight-semibold" id="savedPosts"
-          onclick="window.location.href='404.html'">
+
+        <button
+          class="button side__button nav__button m-2 is-rounded has-text-weight-semibold"
+          id="savedPosts"
+          onclick="window.location.href='404.html'"
+        >
           Latest Mews
         </button>
 
@@ -55,7 +68,7 @@
       <main class="main__container">
         <!-- Header text -->
         <header class="m-2 is-clipped">
-          <a href="./index.html"
+          <a href="/index.html"
             ><h1 class="page__name is-size-1-mobile">Catterday</h1></a
           >
         </header>
@@ -81,29 +94,10 @@
               id="savedPosts" onclick="window.location.href='saved-posts.html'">Latest Mews</button>
           </div>
         </nav>
-        <section class="bookmarkfeed m-2 p-6">
-          <div class="card bookmarkcard">
-                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" class="bookmarkImage"/>
-                  <p class="bookmarkuser">username</p>
-                  <p class="bookmarkbreed">breed type</p>
-            </div>
+        <section class="feed m-2 p-6">
+
         </section>
       </main>
-      </div>
-      <footer class="footer">
-        <button
-          class="button m-2"
-          id="pageRefresh"
-          onclick="window.location.href='index.html'"
-        >
-          More Hiss-terical Posts
-        </button>
-        <button class="button m-2" id="backToTop" onclick="document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;">Back to Top</button>
-        <small>
-          <p>©CATTERDAY | University of Minnesota Bootcamp</p>
-        </small>
-      </footer>
       <div id="profile-modal" class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -140,12 +134,11 @@
         
       </div>
   
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    <script src="moe.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/d14b0991e4.js" crossorigin="anonymous"></script>
+  
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+      <script src="moe.js"></script>
+      <script src="./assets/js/script.js"></script>
     </body>
     </html>
