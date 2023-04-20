@@ -201,6 +201,21 @@ img.profile__image-main {
   height: 100%;
 }
 
+#coty {
+  height: 40%;
+  background-color: var(--primary-card);
+  padding: 40px;
+  border: solid var(--primary-frame) 25px;
+  border-radius: 50%;
+}
+#coty-caption {
+  font-size: 25px;
+  background-color: var(--primary-card);
+  padding: 35px;
+  border: solid var(--primary-frame) 10px;
+  margin: 40px;
+}
+
 .card {
   height: fit-content;
   border: grey;
