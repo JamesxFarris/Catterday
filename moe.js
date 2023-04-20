@@ -1,16 +1,29 @@
-// Dad joke api
-var api = "https://icanhazdadjoke.com/";
 
-async function jokes() {
-  let config = {
+// dad joke api 
+function fetchAPI(){
+  
+  fetch("https://icanhazdadjoke.com/",{
+    method: 'GET',
     headers: {
       Accept: "application/json",
-    },
-  };
-
-  let a = await fetch("https://icanhazdadjoke.com/", config);
-  let b = await a.json();
-  document.getElementById("api").addEventListener("click", jokes);
-  document.getElementById("content").innerHTML = b.jokes;
+    }
+    
+  }).then(res => {
+      return res.json()
+    })
+    .then(data => 
+      document.getElementById('content').textContent = data.joke)
+      
+    .catch(error => console.log('ERROR'))
+    
+    
 }
-console.log(jokes);
+
+document.getElementById('btn').addEventListener('click', fetchAPI);
+
+      
+
+
+      
+      
+     

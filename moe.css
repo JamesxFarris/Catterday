@@ -1,0 +1,16 @@
+button{
+    padding: 20px;
+    color: salmon;
+    margin: 10px;
+    font-size: larger;
+}
+button:hover{
+    transition: 0.5s all ease-in-out 0s;
+    background-color: lightblue;
+    border: 2px inset greenyellow;
+    color: black;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 80px;
+    cursor: pointer;
+}
