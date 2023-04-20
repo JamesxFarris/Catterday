@@ -256,55 +256,144 @@ initSaveBio();
 //currentDates.forEach(textContent = today);
 
 const catUsernames = [
-  "Kitty_Cat39",
-  "Fluffy_Cat32",
-  "Mewcat1000",
-  "Kitten_Hiss09",
-  "Mewman25",
-  "Fluffykitty99",
-  "Catdude01",
-  "Fluffyfluff_08",
-  "Cuddles771",
-  "Meow_Meow1",
-  "Da_Best_Cat2",
-  "The_Cat_Man8",
-  "Cat_on_here556",
-  "Scratchthecat4",
-  "Post_Mewlone",
-  "Litterbug02",
-  "MewCatMew5",
-  "The_Katt_Cat",
-  "Fluffy_Mike66",
-  "Catman_Stan34",
-  "Thisbowlisempty",
-  "Meowsat3amlive",
-  "The_Cat_is_Back",
-  "Thereturnofthekitten",
-  "Cuddlebug33",
-  "CatsWeeklyOffical",
-  "Catsweekly_real42",
-  "Fluff_Stuff899",
-  "Cathy56",
-  "CathleticCo",
-  "TodayinHisstory",
-  "HissingHeather09",
-  "MarlinLeMew77",
-  "John-Catams",
-  "William-Howard-Cat",
-  "Sir-Isaac-Mewton",
-  "Amewlia-Earhart",
-  "Catpurrnicus",
-  "Mewoses",
-  "Cleocatra",
-  "Hisston-Churchill",
-  "Oedipuss",
-  "William-Shakespaw",
-  "Mewlius-Caesar",
-  "Genghis-Kat",
-  "Marie-Purrie",
-  "Furrdinand-Marcos",
+  "@Kitty_Cat39",
+  "@Fluffy_Cat32",
+  "@Mewcat1000",
+  "@Kitten_Hiss09",
+  "@Mewman25",
+  "@Fluffykitty99",
+  "@Catdude01",
+  "@Fluffyfluff_08",
+  "@Cuddles771",
+  "@Meow_Meow1",
+  "@Da_Best_Cat2",
+  "@The_Cat_Man8",
+  "@Cat_on_here556",
+  "@Scratchthecat4",
+  "@Post_Mewlone",
+  "@Litterbug02",
+  "@MewCatMew5",
+  "@The_Katt_Cat",
+  "@Fluffy_Mike66",
+  "@Catman_Stan34",
+  "@Thisbowlisempty",
+  "@Meowsat3amlive",
+  "@The_Cat_is_Back",
+  "@Thereturnofthekitten",
+  "@Cuddlebug33",
+  "@CatsWeeklyOffical",
+  "@Catsweekly_real42",
+  "@Fluff_Stuff899",
+  "@Cathy56",
+  "@CathleticCo",
+  "@TodayinHisstory",
+  "@HissingHeather09",
+  "@MarlinLeMew77",
+  "@John-Catams",
+  "@William-Howard-Cat",
+  "@Sir-Isaac-Mewton",
+  "@Amewlia-Earhart",
+  "@Catpurrnicus",
+  "@Mewoses",
+  "@Cleocatra",
+  "@Hisston-Churchill",
+  "@Oedipuss",
+  "@William-Shakespaw",
+  "@Mewlius-Caesar",
+  "@Genghis-Kat",
+  "@ElonMeowsk",
+  "@Marie-Purrie",
+  "@Furrdinand-Marcos",
+  "@Fluffed_Feline88",
+  "@FelineFamilyMan0308",
+  "@FredtheFluff10",
+  "@Alleycat99",
+  "@Ieatplastic",
+  "@Fluffypants92",
+  "@Not_a_Cat_",
+  "@Catsrule22",
+  "@TheCCS",
+  "@PostsOfTheNCO",
+  "@TheCatThatSmilesBack",
+  "@KittenLoaf78",
+  "@ImFelineFine",
+  "@BeachCat56",
+  "@aDog???",
+  "@CountUrCats123",
+  "@Apawllo",
+  "@Barack-Obameow",
+  "@Bob_Meowley",
+  "@Lucifur",
+  "@Catrick_Swayze",
+  "@Catsy-Cline",
+  "@Pawdrey-Hepburn",
+  "@Bob",
+  "@Tom",
+  "@Fuzz_Aldrin",
+  "@Ruth_Bader_Ginspurr",
 ];
-const randomIndex = Math.floor(Math.random() * catUsernames.length);
+
+let randomIndex = Math.floor(Math.random() * catUsernames.length);
 const randomItem = catUsernames[randomIndex];
 const randomItemElement = document.getElementById("generatedUsername");
+
+function randomizeUsername() {
+  let randomIndex = Math.floor(Math.random() * catUsernames.length);
+}
 randomItemElement.textContent = randomItem;
+
+function generateCatUsername() {
+  let catProfileNodes = document.querySelectorAll(".generatedUsername");
+  for (let catUserI = 0; catUserI < catProfileNodes.length; catUserI++) {
+    //randomizeUsername();
+    catProfileNodes[catUserI].textContent = catUsernames[randomIndex++];
+  }
+}
+
+generateCatUsername();
+
+function generateDadAPI() {
+  let pageNumbers = [];
+
+  for (var i = 0; i <= 75; i++) {
+    pageNumbers.push(i);
+  }
+  var randomPageNumber =
+    pageNumbers[Math.floor(Math.random() * pageNumbers.length)];
+  console.log(randomPageNumber);
+  let randomDadURL =
+    "https://icanhazdadjoke.com/search?limit=10&page=" +
+    randomPageNumber +
+    "&=";
+
+  fetch(randomDadURL, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then(function (response) {
+      /*if(response.ok) {
+                  return response.json()
+              } else {alert('Error' + response.status)}*/
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      generateJokeInfo(data);
+    });
+
+  /*.then(
+      (data) => (document.getElementById("content").textContent = data.joke)
+    )*/
+
+  //.catch((error) => console.log("ERROR"));
+}
+generateDadAPI();
+function generateJokeInfo(data) {
+  let jokeNodes = document.querySelectorAll(".content-input");
+  let jokeListNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for (i = 0; i < jokeNodes.length; i++) {
+    jokeNodes[i].textContent = data.results[jokeListNum[i]].joke;
+  }
+}

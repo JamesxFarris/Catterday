@@ -41,7 +41,7 @@ header {
   color: var(--primary-font-color);
 }
 .page__name {
-  color:var(--primary-font-color);
+  color: var(--primary-font-color);
 }
 aside {
   border: black;
@@ -73,15 +73,17 @@ a {
 
 footer {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
-#pageRefresh, #backToTop {
-  width:30%;
-  border:solid;
-  border-radius:20px;
-  background-color:var(--primary-card);
+
+#pageRefresh,
+#backToTop {
+  width: 30%;
+  border: solid;
+  border-radius: 20px;
+  background-color: var(--primary-card);
 }
 /*layout of page*/
 .page__container {
@@ -110,6 +112,8 @@ footer {
   border-radius: 10px;
   padding: 0.5rem;
   margin: 1rem;
+  position: sticky;
+  top: 1vh;
 }
 
 .profile__container_mobile {
@@ -127,18 +131,18 @@ footer {
 }
 
 .profile__figure {
-  width: 60%;
-  height: 60%;
+  /*width: 60%;
+  height: 60%;*/
   display: flex;
   align-items: center;
 }
 .profile__image-main {
-  object-fit:cover;
+  object-fit: cover;
 }
 img.profile__image-main {
-  height:80px;
-  width:80px;
-};
+  /*height: 80px;**/
+  width: 80px;
+}
 /*figure.is-128x128 {
   height:80px;
   width:80px;
@@ -156,6 +160,10 @@ img.profile__image-main {
   align-items: center;
 }
 
+.profile__usernameinput {
+  font-size: 20px;
+}
+
 .side__button {
   width: 85%;
   height: 3rem;
@@ -163,25 +171,25 @@ img.profile__image-main {
 
 .stick1 {
   position: sticky;
-  top: 2rem;
+  top: 12rem;
 }
 
 .stick2 {
   position: sticky;
-  top: 6rem;
+  top: 16rem;
 }
 
 .stick3 {
   position: sticky;
-  top: 10rem;
+  top: 20rem;
 }
 
-.cat__icon {
-  width: 10rem;
-  height: 10rem;
-  margin-top: 80%;
+.fa-cat {
+  margin-top: 60%;
   position: sticky;
-  top: 45%;
+  top: 60%;
+  color: var(--primary-profile);
+  font-size: 8em;
 }
 
 .side__button__mobile {
@@ -227,47 +235,55 @@ img.profile__image-main {
   margin-bottom: 3rem;
 }
 .cardM {
-    width:100%;
-  
+  width: 100%;
 }
 .bookmarkcard {
-  margin:1rem;
-  padding:2rem;
-  width:25%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  margin: 1rem;
+  padding: 2rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .bookmarkfeed {
-  display:flex;
-  flex-flow:wrap row;
-  justify-content:center;
-  height:100%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  height: 100%;
 }
 .bookmarkImage {
-  width:75px;
-  height:75px;
-  border:none;
-  border-radius:50%;
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
 }
 .bookmarkuser {
   font-size: 150%;
-  font-weight:bolder;
+  font-weight: bolder;
 }
-.bookmarkbreed{
-  font-size:125%;
+.bookmarkbreed {
+  font-size: 125%;
 }
 .fa-paw {
-  color:var(--primary-bookmark);
-  align-self:flex-end;
+  color: var(--primary-bookmark);
+  align-self: flex-end;
 }
 
-#generated__pfp1, #generated__pfp2, #generated__pfp3, #generated__pfp4, #generated__pfp5, #generated__pfp6, #generated__pfp7, #generated__pfp8, #generated__pfp9, #generated__pfp10 {
+#generated__pfp1,
+#generated__pfp2,
+#generated__pfp3,
+#generated__pfp4,
+#generated__pfp5,
+#generated__pfp6,
+#generated__pfp7,
+#generated__pfp8,
+#generated__pfp9,
+#generated__pfp10 {
   object-fit: cover;
-  height:75px;
+  height: 75px;
 }
 .image.is-48x48 {
-  width:75px;
+  width: 75px;
 }
 
 .media {
@@ -278,8 +294,8 @@ img.profile__image-main {
 .content {
   background-color: var(--primary-card);
   padding: 1.5rem;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
@@ -368,8 +384,10 @@ body {
   border-style: solid none solid solid;
   border-bottom-left-radius: 20px;
 }
-.save-bio, .name-save, .theme-select {
-  background-color:var(--primary-card);
+.save-bio,
+.name-save,
+.theme-select {
+  background-color: var(--primary-card);
 }
 .name-space {
   border: solid;
@@ -415,6 +433,27 @@ body {
   padding: 5px;
 }
 
+.footer {
+  background-color: var(--primary-profile);
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+  .stick1 {
+    position: sticky;
+    top: 11rem;
+  }
+
+  .stick2 {
+    position: sticky;
+    top: 15rem;
+  }
+
+  .stick3 {
+    position: sticky;
+    top: 19rem;
+  }
+}
+
 @media (max-width: 1100px) {
   .modal-content {
     height: 70%;
@@ -427,9 +466,27 @@ body {
   }
 
   .bookmarkcard {
-    width:45%;
-   }
+    width: 45%;
+  }
 
+  .fa-cat {
+    top: 60%;
+  }
+
+  .stick1 {
+    position: sticky;
+    top: 11rem;
+  }
+
+  .stick2 {
+    position: sticky;
+    top: 15rem;
+  }
+
+  .stick3 {
+    position: sticky;
+    top: 19rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -454,8 +511,9 @@ body {
   h1 {
     font-size: 500%;
   }
-  #pageRefresh, #backToTop {
-    width:50%;
+  #pageRefresh,
+  #backToTop {
+    width: 50%;
   }
 }
 
@@ -499,14 +557,15 @@ aside {
   h1 {
     font-size: 300%;
   }
-  #pageRefresh, #backToTop {
-    width:70%;
+  #pageRefresh,
+  #backToTop {
+    width: 70%;
   }
   .bookmarkcard {
-    width:90%;
+    width: 90%;
   }
   .bookmarkfeed {
-    flex-flow:nowrap column;
+    flex-flow: nowrap column;
   }
 }
 
@@ -514,9 +573,8 @@ aside {
   h1 {
     font-size: 200%;
   }
-  #pageRefresh, #backToTop {
-    width:80%;
+  #pageRefresh,
+  #backToTop {
+    width: 80%;
   }
 }
-
-
