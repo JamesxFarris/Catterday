@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catterday.gov</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <link rel="stylesheet" id="theme-link" href="./assets/css/themes/berry.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catterday.gov Cat of the Day</title>
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/iconsmind/outline/256/Cat-icon.png">
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      id="theme-link"
+      href="./assets/css/themes/berry.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
 
 <body>
   <!-- Aside for nav -->
@@ -43,6 +52,8 @@
         onclick="window.location.href='404.html'">
         Latest Mews
       </button>
+
+      <i class="fa-solid fa-cat cat__icon"></i>
 
     </aside>
 
@@ -78,53 +89,38 @@
             id="savedPosts" onclick="window.location.href='saved-posts.html'">Latest Mews</button>
         </div>
       </nav>
-
-
-
-      <!-- Main post body -->
-      <section class="feed m-2 p-6">
-
+        <section class="feed m-2 p-6">
         <img id="coty" src="./assets/images/lacy.jpg" alt="Lacy, the best of us, a cat" />
         <p id="coty-caption">Lacy, Cincinnati, OH</p>
-
-
-
-
-        <footer class="footer">
-
-          <button class="button m-2" id="pageRefresh" onclick="window.location.href='index.html'">
-            More Hiss-terical Posts
-          </button>
-          <button class="button m-2" id="backToTop" onclick="document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;">Back to Top</button>
-          <small>
-            <p>©CATTERDAY | University of Minnesota Bootcamp</p>
-          </small>
-
-
-
-        </footer>
-
-
-
-
-        <div id="profile-modal" class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-content">
-            <image class="your-profile-picture profile__image"
-              src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
-              alt="a cat" />
-            <div class="info-card">
-              <div class="name-box">
-                <input class="input is-large name-space" type="text" placeholder="Large input">
-                <button class="name-save">save username</button>
-              </div>
-
-
-              <div class="option-holder">
-                <div class="bio-box control">
-                  <input class=" bio-box__input" type="text" placeholder="Add your bio!">
-                  <button class="save-bio">save bio</button>
+        </section>
+      </main>
+    </div>
+      <footer class="footer">
+        <button
+          class="button m-2"
+          id="pageRefresh"
+          onclick="window.location.href='index.html'"
+        >
+          Return Home
+        </button>
+        <small>
+          <p>©CATTERDAY | University of Minnesota Bootcamp</p>
+        </small>
+      </footer>
+     
+      <div id="profile-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <image class="your-profile-picture" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="a cat"/>
+          <div class="info-card">
+            <div class="name-box">
+              <input class="input is-large name-space" type="text" placeholder="Large input">
+              <button class="name-save">save username</button>
+            </div>
+            <div class="option-holder">
+              <div class="bio-box control">
+                <input class=" bio-box__input" type="text" placeholder="Add your bio!">
+                <button class="save-bio">save bio</button>
                 </div>
                 <div class="theme-box level-item level-right">
                   <div class="switch">
