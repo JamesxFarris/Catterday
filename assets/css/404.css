@@ -55,6 +55,7 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     font-size: 25px;
+    text-align: justify;
   }
   
   p:last-child:after {
