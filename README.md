@@ -4,11 +4,14 @@
 ---
 This project was created with a simple question in mind... What if social media... but for cats!
 
-And so Project Catterday was born. More of an art piece than an application, Catterday provides vast minutes of entertainment.
+And so Project Catterday was born. More of an art piece than an application, Catterday provides vast *minutes* of entertainment.
 
-And so, welcome to our page! But remember, the cats don't know you're human, and best you keep it that way, who knows what the cats are hiding, and what lengths they'd go to to keep it that way.
+And so, welcome to our page! But remember, the cats don't know you're human, and best you keep it that way, who knows what the cats are hiding, and what lengths they'd go to to keep it that way. Create a profile to blend in.
 
 ![Screenshot](./assets/images/cat-scratch-feev.github.io_Catterday_index.html%20(1).png)
+
+## Usage
+To use Catterday, simply load the page to generate a feed of cat profiles and jokes. Clicking the profile brings up a modal in which you can select user customization and save your preferences! You can select a profile picture save a username and bio, and choose from our theme options. The page can be refreshed to generate more jokes and profiles, and the buttons in footer can help to traverse the page or load new pages as well.
 
 ## Credits
 ---
@@ -21,14 +24,20 @@ And so, welcome to our page! But remember, the cats don't know you're human, and
 
 Our super secret page was created with assets by Saijo George and posted [here](https://codemyui.com/fallout-pip-boy-screen-in-css-and-html/)
 
+### Languages, APIs, Frameworks
 Our two API partners in this frivolous endeavor are:
 - [Dad Jokes](https://icanhazdadjoke.com/)
 - [The Cat API](https://api.thecatapi.com/)
 
+We also used:
+- HTML, CSS, JavaScript
+- [Bulma](https://bulma.io/)
+- [Font Awesome](https://fontawesome.com/)
+- [day.js](https://day.js.org/)
 
 ## License
 ---
-
+MIT License
 
 ## Features
 ---
@@ -38,4 +47,9 @@ Our two API partners in this frivolous endeavor are:
 
 - A lovely Cat of the Year Showcase, maybe one day, a new cat will be crowned.
 
+- Bookmarks are soon to be implemented, we opted to leave the page in as is.
+
 - Latest Mews? More like government conspiracy!!! You'll see...
+
+## Link to Live Page
+[Catterday](https://cat-scratch-feev.github.io/Catterday/)
